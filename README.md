@@ -1,35 +1,42 @@
-# 🍽️ Restaurant App – Fullstack Project
 
-This is a fullstack restaurant application with a **Laravel backend** and a **React/Next.js frontend**.
+# 🍽️ Bliss Restaurant – Fullstack Web App
 
-This guide will walk you through how to set up and run the project **locally**.
+This is a fullstack restaurant application with a **Laravel 12 backend** and a **React/Next.js frontend**.
+
+This guide will help you run the full project **locally** on your machine.
 
 ---
 
-## 🧾 Prerequisites
+## 🔗 Repository
 
-Before getting started, make sure you have the following installed on your machine:
+📦 GitHub Repo: [ahmed-bekhit101/Bliss-Restaurant](https://github.com/ahmed-bekhit101/Bliss-Restaurant)
 
-### 🔧 Backend (Laravel)
-- PHP 8.1 or higher
+---
+
+## ⚙️ Prerequisites
+
+Before you begin, make sure you have the following installed:
+
+### Backend (Laravel)
+- PHP >= 8.1
 - Composer
-- MySQL 
-- XAMPP (optional for DB)
+- MySQL (e.g., via XAMPP)
+- Git
 
-### ⚙️ Frontend (Next.js)
+### Frontend (Next.js)
 - Node.js (v18 or higher)
-- npm or yarn
+- npm (comes with Node)
 
 ---
 
-## 📦 Installation Guide
+## 🚀 Getting Started
 
-### 🔁 1. Clone the repository
+### 1️⃣ Clone the Repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/restaurant.git
-cd restaurant
-🧠 2. Set up the Backend (Laravel)
+git clone https://github.com/ahmed-bekhit101/Bliss-Restaurant.git
+cd Bliss-Restaurant
+🔧 Backend Setup (Laravel)
 bash
 Copy
 Edit
@@ -39,18 +46,25 @@ bash
 Copy
 Edit
 composer install
-Copy the example environment file:
+Copy environment file:
 bash
 Copy
 Edit
 cp .env.example .env
-Generate the application key:
+Generate the app key:
 bash
 Copy
 Edit
 php artisan key:generate
-Configure your database:
-Open .env and set your database connection:
+Set up your MySQL database:
+Open MySQL (via XAMPP/phpMyAdmin or CLI) and create a new database:
+
+pgsql
+Copy
+Edit
+Database name: bliss_restaurant
+Configure .env:
+Edit the .env file and update the database section:
 
 env
 Copy
@@ -58,72 +72,69 @@ Edit
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
 DB_PORT=3306
-DB_DATABASE=restaurant_db
+DB_DATABASE=bliss_restaurant
 DB_USERNAME=root
-DB_PASSWORD=
-💡 You can use XAMPP or Laravel Valet. Create the database manually (e.g., restaurant_db).
-
-Run migrations:
+DB_PASSWORD=    # leave blank if no password in XAMPP
+Run the migrations:
 bash
 Copy
 Edit
 php artisan migrate
-Start the Laravel backend:
+Start the backend server:
 bash
 Copy
 Edit
 php artisan serve
-By default, the API will be available at:
+You should now have the API running at:
 
 arduino
 Copy
 Edit
 http://localhost:8000
-💻 3. Set up the Frontend (Next.js)
+🎨 Frontend Setup (Next.js)
 bash
 Copy
 Edit
 cd ../frontend
-Install frontend dependencies:
+Install dependencies:
 bash
 Copy
 Edit
 npm install
-Create the frontend environment file:
+Create environment file:
 bash
 Copy
 Edit
 touch .env.local
-Inside .env.local, add:
+Add the following to .env.local:
 
 env
 Copy
 Edit
 NEXT_PUBLIC_API_URL=http://localhost:8000/api
-Run the frontend development server:
+Start the frontend server:
 bash
 Copy
 Edit
 npm run dev
-By default, the frontend will run at:
+Frontend will be running at:
 
 arduino
 Copy
 Edit
 http://localhost:3000
-✅ Accessing the App
-Backend API: http://localhost:8000/api
+✅ Summary
+Part	URL
+Frontend	http://localhost:3000
+Backend	http://localhost:8000/api
 
-Frontend UI: http://localhost:3000
+Make sure the backend is running before starting the frontend!
 
-Make sure the backend is running before starting the frontend so that API calls work correctly.
+🐛 Troubleshooting
+Make sure MySQL is running in XAMPP.
 
-❓ Troubleshooting
-If .env or .env.local files are missing or misconfigured, the app will fail to connect to the database or API.
+Check .env files for typos or incorrect database names.
 
-Make sure MySQL is running (via XAMPP or other).
+Restart php artisan serve if port 8000 is busy.
 
-Make sure your backend runs on port 8000 and frontend on 3000 (or adjust accordingly).
-
-📬 Need Help?
-Feel free to open an issue in the GitHub repo if something doesn't work!
+If you use a different DB password, update it in .env.
