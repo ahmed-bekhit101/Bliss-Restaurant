@@ -1,0 +1,16 @@
+@import "tailwindcss";
+@plugin "flowbite-react/plugin/tailwindcss";
+@source "../../.flowbite-react/class-list.json";
+
+
+.playfair-display{
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+}
+
+.line-spacing {
+  line-height: 2;
+}
+li{
+  font-weight: 300;
+}
