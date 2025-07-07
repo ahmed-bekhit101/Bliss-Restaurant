@@ -1,7 +1,7 @@
 
 # 🍽️ Bliss Restaurant – Fullstack Web App
 
-This is a fullstack restaurant application with a **Laravel 12 backend** and a **React/Next.js frontend**.
+This is a fullstack restaurant application with a **Laravel 12 backend** and a **Next.js frontend**.
 
 This guide will help you run the full project **locally** on your machine.
 
